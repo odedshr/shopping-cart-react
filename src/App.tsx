@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {  BrowserRouter as Router } from 'react-router-dom';
+import './App.scss';
+import Filters from './filters/filters';
+import Preferences from './preferences/preferences';
+import ViewResults from './views/ViewResults';
+import Cart from './cart/Cart';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <main className="App grid-container">
+    <Router>
+    <header className="hero">
+      <div className="topBar">
+        <h1 className="appTitle">Casa <sub>de</sub> Olaf</h1>
+        <Cart />
+      </div>
+      <div className="breadcrumbs"><a href="/">home</a> / <a href="/products">products</a> / <a href="/products/delivery">delivery</a></div>
+      <h2 className="pageTitle">Products for Delivery</h2>
+    </header>
+    <Filters />
+    <Preferences />
+  <ViewResults />
+    </Router>
+  </main>
+);
 
 export default App;
