@@ -11,8 +11,11 @@ class ViewResults extends Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
     this.state = { items:[] as Product[]};
-    store.subscribe(() => this.setState({ items: store.getState().items }));
     store.dispatch({type: 'data/query'});
+  }
+  
+  componentDidMount() {
+    store.subscribe(() => this.setState({ items: store.getState().items }));
   }
 
   render() {

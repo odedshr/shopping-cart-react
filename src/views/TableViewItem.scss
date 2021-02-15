@@ -1,80 +1,82 @@
 @import "../controls/common";
 
-.product_kosher {
-  text-transform: capitalize;
-}
+.tableView {
+  .product_kosher {
+    text-transform: capitalize;
+  }
 
-tr {
-  height: 6rem;
-  
-  &:not(:last-child) td {
-    border-bottom: 1px solid $clr-border;
+  tr {
+    height: 6rem;
+    
+    &:not(:last-child) td {
+      border-bottom: 1px solid $clr-border;
+    }
+  }
+
+  td {
+    padding: 0.5rem;
+  }
+
+  .product_name {
+    color: var(--nc-tx-2);
+    font-size: 2rem;
+  }
+
+  .product_cost {
+    color: var(--nc-tx-2);
+    font-size: 1.6rem;
+
+    &:before {
+      content: "£";
+    }
+  }
+
+  .product_cost,
+  .product_servings,
+  .product_kCalPerServing {
+      text-align: right;
+  }
+
+  .product_lowSugar,
+  .product_lowFat,
+  .product_glutenFree,
+  .product_nutFree,
+  .product_vegetarian,
+  .product_vegan {
+    text-align: center;;
+  }
+
+  .product_image_col {
+    padding: 0.5rem;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .product_image {
+    align-items: center;
+    display: flex;
+    height: 4rem;
+    overflow: hidden;
+    justify-content: center;
+    padding: 0;
+    margin: 0.5rem;
+    width: 4rem;
+
+    img {
+      width: 100%;
+    }
   }
 }
 
-td {
-  padding: 0.5rem;
-}
+  .tableView_product_actions {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    transform: scale(1);
+    transition: transform 0.25s ease-in-out;
 
-.product_name {
-  color: var(--nc-tx-2);
-  font-size: 2rem;
-}
-
-.product_cost {
-  color: var(--nc-tx-2);
-  font-size: 1.6rem;
-
-  &:before {
-    content: "£";
+    tr:not(:hover) & {
+      transform: scale(0);
+    }
   }
-}
-
-.product_cost,
-.product_servings,
-.product_kCalPerServing {
-    text-align: right;
-}
-
-.product_lowSugar,
-.product_lowFat,
-.product_glutenFree,
-.product_nutFree,
-.product_vegetarian,
-.product_vegan {
-  text-align: center;;
-}
-
-.product_image_col {
-  padding: 0.5rem;
-  position: relative;
-  text-align: center;
-  vertical-align: middle;
-}
-
-.product_image {
-  align-items: center;
-  display: flex;
-  height: 4rem;
-  overflow: hidden;
-  justify-content: center;
-  padding: 0;
-  margin: 0.5rem;
-  width: 4rem;
-
-  img {
-    width: 100%;
-  }
-}
-
-.product_actions {
-  position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
-  transform: scale(1);
-  transition: transform 0.25s ease-in-out;
-
-  tr:not(:hover) & {
-    transform: scale(0);
-  }
-}

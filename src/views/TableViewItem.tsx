@@ -55,9 +55,9 @@ class TableViewItem extends Component<IProps, IState> {
           alt={product.images[0].alt}
         />
       </figure>
-      <div className="product_actions">
+        <div className="tableView_product_actions">
         <button
-          className="product_action product_addBasket"
+            className="product_action product_addBasket"
             onClick={this.addToCart.bind(this)}
         >
           <BasketIcon/>

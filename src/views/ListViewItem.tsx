@@ -51,7 +51,7 @@ class ListViewItem extends Component<IProps, IState> {
 
     return (
       <div className="listView_product">
-        <figure className="product_image">
+        <figure className="listView_product_image">
           <img
             src={ product.images[0].src}
             alt={ product.images[0].alt}

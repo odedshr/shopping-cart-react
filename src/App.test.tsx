@@ -5,7 +5,7 @@ import { chromium, Browser, Response } from 'playwright';
 
 test('renders learn react link', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
+  const linkElement = screen.getByText(/Products for Delivery/i);
   expect(linkElement).toBeInTheDocument();
 });
 
@@ -22,7 +22,6 @@ describe("Home Page", () => {
   });
 
   test("The page loads successfully", async () => {
-    // Get the HTTP status code of the response. A 200 means it loaded successfully!
     expect(response ? response.status(): 500).toBe(200)
   });
 
