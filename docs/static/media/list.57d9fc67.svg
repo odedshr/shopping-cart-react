@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24.172" height="16.815" viewBox="0 0 24.172 16.815">
+	<g transform="translate(5.889 7.48)">
+		<path className="a" d="M141.6,236h-16.4a.943.943,0,0,0,0,1.886h16.4a.943.943,0,0,0,0-1.886Z" transform="translate(-124.262 -236)" />
+	</g>
+	<g transform="translate(5.889 0.407)">
+		<path className="a" d="M141.6,86h-16.4a.943.943,0,1,0,0,1.886h16.4a.943.943,0,1,0,0-1.886Z" transform="translate(-124.262 -86)" />
+	</g>
+	<g transform="translate(5.889 14.553)">
+		<path className="a" d="M141.6,386h-16.4a.943.943,0,1,0,0,1.886h16.4a.943.943,0,1,0,0-1.886Z" transform="translate(-124.262 -386)" />
+	</g>
+	<g transform="translate(0 0)">
+		<g transform="translate(0 0)">
+			<circle className="a" cx="1.314" cy="1.314" r="1.314" />
+		</g>
+	</g>
+	<g transform="translate(0 7.181)">
+		<g transform="translate(0 0)">
+			<ellipse className="a" cx="1.314" cy="1.226" rx="1.314" ry="1.226" />
+		</g>
+	</g>
+	<g transform="translate(0 14.188)">
+		<g transform="translate(0 0)">
+			<circle className="a" cx="1.314" cy="1.314" r="1.314" />
+		</g>
+	</g>
+</svg>

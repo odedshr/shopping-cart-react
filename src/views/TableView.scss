@@ -1,0 +1,34 @@
+@import "../controls/common";
+
+.tableView {
+  border: 1px solid $clr-border;
+  margin: 2.1rem 1rem 0;
+  width: 100%;
+}
+
+th {
+  border-bottom: 1px solid $clr-border;
+}
+
+th {
+  font-weight: 100;
+  line-height: 1rem;
+  padding-top: 0.75rem;
+
+  &[title] {
+    cursor: help;
+  }
+}
+
+tr:not(:nth-child(2n)) {
+  background-color: rgba(0,0,0, 0.1);
+}
+
+td {
+  padding: 0.5rem;
+}
+
+.boolCol {
+  width: 3rem;
+}
+</style>

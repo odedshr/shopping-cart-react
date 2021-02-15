@@ -1,0 +1,116 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  --nc-bg-1: white;
+  --nc-bg-2: #f7f7f7;
+  --nc-tx-1: black;
+  --nc-tx-2: #707070;
+  --nc-lk-1: #846873;
+  --nc-lk-2: #554232;
+  background-color: var(--nc-bg-1);
+  color: var(--nc-tx-1);
+  font-family: "KhmerMN", Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  margin:0 auto;
+  padding: 0;
+}
+
+svg {
+  .checkboxIcon {
+    fill: var(--nc-bg-1);
+    stroke: var(--nc-lk-1);
+  }
+
+  .checkboxIcon-checked {
+    fill: var(--nc-lk-1);
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .a {
+    fill: var(--nc-lk-1);
+    transition: fill 0.5s ease-in-out;
+  }
+
+  .fullShape {
+    stroke: var(--nc-lk-1);
+    fill: var(--nc-bg-1);
+    transition: fill 0.5s ease-in-out, stroke 0.5s ease-in-out;
+  }
+}
+
+button {
+  background-color: var(--nc-lk-2);
+  border: none;
+  border-radius: 0.2rem;
+  color: var(--nc-bg-1);
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.toggleBtn,
+button {
+    border: 1px solid var(--nc-lk-1);
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    transition: background-color 0.5s ease-in-out;
+    user-select: none;
+
+    input:not(:checked) + & .checkboxIcon-checked {
+      opacity: 0;
+    }
+
+    &:active,
+    input:checked + &,
+    &.is-active,
+    &[data-pressed="true"] {
+      color: var(--nc-bg-1);
+
+      &:before {
+        height: 40vw;
+        width: 40vw;
+      }
+      
+      .a {
+        fill: var(--nc-bg-1);
+      }
+
+      .fullShape {
+        stroke: var(--nc-bg-1);
+      }
+    }
+
+    &:before {
+      content:"";
+      background: radial-gradient(circle at 50%, var(--nc-lk-1) 50%, transparent 60%);
+      border-radius: 50%;
+      height: 0;
+      left: 50%;
+      position: absolute;
+      transition: all 0.25s ease-in-out;
+      transform: translate(-50%,-50%);
+      top: 50%;
+      width: 0;
+      z-index: -1;
+    }
+  }
+
+#root {
+  padding: 1rem;
+  margin: 0 2rem;
+
+  @media screen and (min-width: 1000px) {
+    margin: 0 calc((50vw - 50rem));
+  }
+}

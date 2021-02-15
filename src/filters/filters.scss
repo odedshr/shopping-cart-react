@@ -1,0 +1,46 @@
+.filters_title {
+    border-bottom: 1px solid var(--nc-tx-2);
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .filters_type {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .filters_servings fieldset {
+    align-items: baseline;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  h4 {
+    margin: 0;
+  }
+  
+  section {
+    margin: 1rem 0 2rem;
+  }
+
+  .numberField {
+    height: 3rem;
+    text-align: right;
+    width: 4.5rem;
+  }
+
+  .checkbox {
+    span {
+      display: inline-block;
+      height: 2rem;
+    }
+
+    svg {
+      height: 1.5rem;
+      margin-right: 1rem;
+      width: 1.5rem;
+    }
+  } 

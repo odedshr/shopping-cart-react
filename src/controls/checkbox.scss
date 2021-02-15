@@ -1,0 +1,26 @@
+@import './common';
+
+  .checkbox {
+    display: flex;
+
+    .toggleBtn {
+      display: flex;
+      align-items: center;
+      padding: 1.5rem 0.5rem;
+    }
+    
+    &[data-theme="mute"] .toggleBtn {
+      background: none;
+      border: none;
+      color: var(--nc-tx-1);
+
+      input:checked + .toggleBtn {
+        background: none;
+        border: none;
+      }
+
+      &:before {
+        opacity: 0;
+      }
+    }
+  } 

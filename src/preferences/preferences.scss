@@ -1,0 +1,39 @@
+.preferences,
+  .viewAs {
+    align-items: center;
+    justify-content: flex-end;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .viewAs {
+    margin-right: 1rem;
+  }
+
+  .btn_list,
+  .btn_table {
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 2rem;
+    display: inline-flex;
+    height: 4rem;
+    place-content: center;
+    width: 4rem;
+
+    span {
+      display: none;
+    }
+  }
+
+  .sortBy_field {
+    appearance: none;       /* Remove default arrow */
+    background-image: url(/assets/arrow-down.svg);   /* Add custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    height: 4rem;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+    width: 18rem;
+
+  }

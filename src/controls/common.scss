@@ -1,0 +1,86 @@
+$clr-shadow: rgba(0, 0, 0, 0.16);
+$clr-border: #ccc;
+
+  .field {
+    border: none;
+    display: block;
+    padding: 0.5rem;
+  } 
+
+  .tag {
+    border: 0.1rem solid var(--nc-lk-1);
+    box-sizing: border-box;
+    border-radius: 0.25rem;
+    display: inline-block;
+
+    height: 2.5rem;
+    overflow: hidden;
+    padding: 0 0.5rem;
+    position: relative;
+    transition: color 0.25s ease-in-out;
+    z-index: 0;
+
+    fieldset[data-expanded="false"] & {
+      pointer-events: none;
+    }
+
+    input + & {
+      cursor: pointer;
+    }
+  }
+
+  .product_action {
+  align-items :center;
+  background-color: var(--nc-bg-1);
+  border: 2px solid transparent;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  cursor:pointer;
+  height: 3rem;
+  outline: none;
+  transition: transform 0.25s ease-in-out, border 0.25s ease-in-out;
+  width: 3rem;
+
+  &:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+
+  span {
+    display: none;
+  }
+
+  &.product_addBasket {
+    position: relative;
+
+    svg {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+
+  &:active,
+  &:focus {
+    border-color: var(--nc-lk-tx);
+  }
+  &:hover,
+  &:active  {
+    transform: scale(1.1);
+  }
+}
+
+.product_qty {
+  align-items: baseline;
+  background-color: var(--nc-lk-1);
+  border-radius: 50%;
+  bottom: 0.5rem;
+  color: var(--nc-bg-1);
+  display: inline-flex;
+  font-size: 1rem;
+  justify-content: center;
+  height: 1.2rem;
+  pointer-events: none;
+  position: absolute;
+  right: 0.5rem;
+  width: 1.2rem;
+}

@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/static/css/main.322f219a.chunk.css",
+    "main.js": "/static/js/main.ba720088.chunk.js",
+    "main.js.map": "/static/js/main.ba720088.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ee67be44.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ee67be44.js.map",
+    "static/js/2.eb8cc904.chunk.js": "/static/js/2.eb8cc904.chunk.js",
+    "static/js/2.eb8cc904.chunk.js.map": "/static/js/2.eb8cc904.chunk.js.map",
+    "static/js/3.70fbce76.chunk.js": "/static/js/3.70fbce76.chunk.js",
+    "static/js/3.70fbce76.chunk.js.map": "/static/js/3.70fbce76.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.322f219a.chunk.css.map": "/static/css/main.322f219a.chunk.css.map",
+    "static/js/2.eb8cc904.chunk.js.LICENSE.txt": "/static/js/2.eb8cc904.chunk.js.LICENSE.txt",
+    "static/media/preferences.scss": "/static/media/arrow-down.290c7ec3.svg",
+    "static/media/Cart.scss": "/static/media/close.35305d4a.svg",
+    "static/media/basket.ed0ed93d.svg": "/static/media/basket.ed0ed93d.svg",
+    "static/media/checkbox.e8a41e56.svg": "/static/media/checkbox.e8a41e56.svg",
+    "static/media/gluten-free.bc7e513f.svg": "/static/media/gluten-free.bc7e513f.svg",
+    "static/media/grid.5c12fc34.svg": "/static/media/grid.5c12fc34.svg",
+    "static/media/heart.30017847.svg": "/static/media/heart.30017847.svg",
+    "static/media/kcal.2988c2d3.svg": "/static/media/kcal.2988c2d3.svg",
+    "static/media/kosher.0ee08a85.svg": "/static/media/kosher.0ee08a85.svg",
+    "static/media/list.57d9fc67.svg": "/static/media/list.57d9fc67.svg",
+    "static/media/nut-free.d454035c.svg": "/static/media/nut-free.d454035c.svg",
+    "static/media/sugar.a05b34c0.svg": "/static/media/sugar.a05b34c0.svg",
+    "static/media/trash.c8a79ca4.svg": "/static/media/trash.c8a79ca4.svg",
+    "static/media/vegan.4a6d6cb3.svg": "/static/media/vegan.4a6d6cb3.svg",
+    "static/media/vegetarian.dd8134df.svg": "/static/media/vegetarian.dd8134df.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ee67be44.js",
+    "static/js/2.eb8cc904.chunk.js",
+    "static/css/main.322f219a.chunk.css",
+    "static/js/main.ba720088.chunk.js"
+  ]
+}
