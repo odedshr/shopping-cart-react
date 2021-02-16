@@ -22,7 +22,6 @@ const { strings } = i18n;
 
 interface IProps {
 }
-
 interface IState {
   query: Partial<SearchQuery>;
   allTypes: { key: string; value: string }[];

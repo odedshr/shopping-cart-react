@@ -76,7 +76,7 @@ class MultiSelect extends Component<IProps, IState> {
         onBlur={toggle}
         className={`field multiSelect ${this.props.className}`}
       >
-        <ul className="output" onClick={toggle} >
+        <ul className="output" onClick={toggle}>
           {filteredData.map(({ key, value }: { key: string, value: string }, index) => (
             <li key={index} className="multiSelect_item tag" data-pressed="true" onClick={this.remove.bind(this, key)}
             >{value}</li >))}

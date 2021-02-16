@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
-import { chromium, Browser, Response } from 'playwright';
+import { chromium, Browser, Response, Page } from 'playwright';
 
 test('renders learn react link', () => {
   render(<App />);
@@ -12,7 +12,7 @@ test('renders learn react link', () => {
 describe("Home Page", () => {
   let response: Response | null;
   let browser: Browser;
-  let page;
+  let page:Page;
 
   beforeAll(async () => {
     // Create a browser instance
@@ -22,7 +22,16 @@ describe("Home Page", () => {
   });
 
   test("The page loads successfully", async () => {
-    expect(response ? response.status(): 500).toBe(200)
+    expect(response ? response.status(): 500).toBe(200);
+    expect(await page.title()).toBe('React Shopping-cart demo')
+  });
+
+  test("Items are added to cart", async () => {
+    expect(await page.$('.cartSummary_count')).toBeFalsy()
+    await page.click('.listView_product_addBasket');
+    expect(await page.textContent('.cartSummary_count')).toBe('1');
+    await page.click('.listView_product_addBasket');
+    expect(await page.textContent('.cartSummary_count')).toBe('2');
   });
 
   afterAll(async () => {

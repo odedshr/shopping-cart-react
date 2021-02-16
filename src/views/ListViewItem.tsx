@@ -63,9 +63,9 @@ class ListViewItem extends Component<IProps, IState> {
             onClick={this.addToCart.bind(this)}
           >
             <BasketIcon />
-            <span>Add to basket</span>
+            <span>{strings.addToBasket}</span>
           </button>
-          <div className="listView_product_qty">{quantity || '+'}</div>
+          <div className="product_qty">{quantity || '+'}</div>
         </div>
         <div className="listView_product_info">
           { product.dietaryOptions.glutenFree ? <span title={strings.glutenFree}><GlutenIcon /></span> : '' }
