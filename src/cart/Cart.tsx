@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import store from './store';
 import i18n from '../i18n';
 import CartRow from './CartRow';
+import { ReactComponent as BasketIcon } from '../icons/basket.svg';
 import './Cart.scss';
 
 const { strings }= i18n;
@@ -27,7 +28,11 @@ class Cart extends Component<IProps, IState>  {
 
   toggle() {
     const state = this.state;
-    this.setState({ ...state, isVisible: !state.isVisible });
+    this.setState({ ...state, isVisible: !!state.count && !state.isVisible });
+  }
+
+  removeAll() {
+    store.dispatch({type: 'cart/clear'});
   }
 
   stopPropagation(evt: React.MouseEvent<HTMLDivElement, MouseEvent>) {
@@ -44,14 +49,15 @@ class Cart extends Component<IProps, IState>  {
     return (
     <aside className="cart">
       <label className="cartSummary" onClick={toggle}>
+        { count ? <span className="cartSummary_action">{strings.viewMyCart}</span> : '' }
+        <BasketIcon />
         { count ? <div className="cartSummary_count">{this.state.count}</div> : '' }
-        <span className="cartSummary_action">{strings.viewMyCart}</span>
       </label>
       { count > 0 && isVisible ? <div className="cartWrapper" onClick={toggle} >
           <div className="cartContent" onClick={this.stopPropagation.bind(this)}>
         <div className="cart_header">
           <h2 className="cart_title">{strings.reviewYourCart}</h2>
-          <label className="cart_close"><span>{strings.close}</span></label>
+          <label className="cart_close" onClick={toggle}><span>{strings.close}</span></label>
         </div >
         <table className="cart_table">
           <thead>
@@ -77,7 +83,7 @@ class Cart extends Component<IProps, IState>  {
           </tfoot>
         </table>
         <div className="cart_actions">
-          <button className="cart_removeAll" data-task="removeAll">{ strings.removeAllItems }</button>
+          <button className="cart_removeAll" onClick={this.removeAll.bind(this)}>{ strings.removeAllItems }</button>
           <button className="cart_checkout" data-task="checkout">{strings.checkout}</button>
         </div>
       </div >

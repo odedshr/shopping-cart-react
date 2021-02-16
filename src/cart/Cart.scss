@@ -7,18 +7,20 @@
 }
 
 .cartSummary {
-  background-image: url(../assets/basket.svg);
-  background-position: 1rem 0.5rem;
-  background-repeat: no-repeat;
-  background-size: 2rem;
   border-radius: 2rem;
   cursor: pointer;
   display: inline-block;
   font-size: 1.2rem;
-  line-height: 3rem;
   min-height: 3rem;
-  padding: 0.5rem 1rem 0 4rem;
+  padding: 0.5rem 1rem 0 0;
   position: relative;
+
+  svg {
+    height: 2rem;
+    stroke: currentColor;
+    stroke-width: 0.05rem;
+    width: 2rem
+  }
 }
 
 .cartSummary:focus {
@@ -34,18 +36,16 @@
   color: var(--nc-bg-1);
   display: flex;
   height: 1.5rem;
-  left: 1.75rem;
+  right: 0rem;
   place-content: center;
   padding-top: 0.3rem;
   position: absolute;
   width: 1.8rem;
 }
-.cartSummary_action {
-  text-decoration: underline;
 
-  &:first-child {
-    display: none;
-  }
+.cartSummary_action {
+  margin-right: 1rem;
+  text-decoration: underline;
 }
 
 .showCart_checkbox:not(:checked) + .cartWrapper {
